@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | NOVAN CRAFT</title>
+
+    <!-- Tailwind & Library -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    class="bg-white text-black dark:bg-black dark:text-white transition duration-300"
+  >
+    <!-- Navbar -->
+    <nav
+      class="flex justify-between items-center px-6 py-4 sticky top-0 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700 z-50"
+    >
+      <a href="index.html" class="text-xl font-bold tracking-tight"
+        >← NOVAN CRAFT</a
+      >
+      <button id="dark-mode-toggle" title="Dark Mode">
+        <i data-lucide="moon" class="w-5 h-5"></i>
+      </button>
+    </nav>
+
+    <!-- Panel Admin -->
+    <section class="max-w-5xl mx-auto px-6 py-20">
+      <h1 class="text-3xl font-semibold mb-10 text-center" data-aos="fade-up">
+        Daftar Pesanan
+      </h1>
+
+      <div class="overflow-x-auto" data-aos="fade-up">
+        <table
+          class="min-w-full border border-gray-200 dark:border-gray-700 text-sm"
+        >
+          <thead>
+            <tr class="bg-gray-100 dark:bg-gray-800 text-left">
+              <th class="px-4 py-3 border dark:border-gray-700">Nama</th>
+              <th class="px-4 py-3 border dark:border-gray-700">WhatsApp</th>
+              <th class="px-4 py-3 border dark:border-gray-700">Produk</th>
+              <th class="px-4 py-3 border dark:border-gray-700">Alamat</th>
+              <th class="px-4 py-3 border dark:border-gray-700">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dummy Data -->
+            <tr
+              class="border-t dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+            >
+              <td class="px-4 py-3">Sinta Dewi</td>
+              <td class="px-4 py-3">081234567890</td>
+              <td class="px-4 py-3">Buket Mawar Merah</td>
+              <td class="px-4 py-3">Jl. Melati No. 12, Solo</td>
+              <td class="px-4 py-3 text-green-600 font-medium">Dikirim</td>
+            </tr>
+            <tr
+              class="border-t dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+            >
+              <td class="px-4 py-3">Andi Pratama</td>
+              <td class="px-4 py-3">085678912345</td>
+              <td class="px-4 py-3">Buket Elegan</td>
+              <td class="px-4 py-3">Perum Griya, Sukoharjo</td>
+              <td class="px-4 py-3 text-yellow-500 font-medium">Diproses</td>
+            </tr>
+            <!-- Tambahkan baris lain di sini jika perlu -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="text-center py-10 text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800"
+    >
+      © 2025 NOVAN CRAFT Admin Panel
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+      lucide.createIcons();
+      AOS.init();
+    </script>
+  </body>
+</html>

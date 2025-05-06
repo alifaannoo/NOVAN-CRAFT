@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | NOVAN CRAFT</title>
+
+    <!-- Tailwind & Library -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    class="bg-white text-black dark:bg-black dark:text-white transition duration-300"
+  >
+    <!-- Navbar -->
+    <nav
+      class="flex justify-between items-center px-6 py-4 sticky top-0 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700 z-50"
+    >
+      <a href="index.html" class="text-xl font-bold tracking-tight"
+        >← Kembali</a
+      >
+      <button id="dark-mode-toggle" title="Dark Mode">
+        <i data-lucide="moon" class="w-5 h-5"></i>
+      </button>
+    </nav>
+
+    <!-- Checkout Form -->
+    <section class="max-w-2xl mx-auto px-6 py-20">
+      <h1 class="text-3xl font-semibold mb-8 text-center" data-aos="fade-up">
+        Form Pemesanan
+      </h1>
+
+      <form class="space-y-6" data-aos="fade-up" id="form-pemesanan">
+        <div>
+          <label class="block mb-1">Nama Lengkap</label>
+          <input
+            type="text"
+            name="nama"
+            required
+            class="w-full border rounded-md px-4 py-3 bg-white dark:bg-gray-800 dark:border-gray-600"
+          />
+        </div>
+
+        <div>
+          <label class="block mb-1">Nomor WhatsApp</label>
+          <input
+            type="tel"
+            name="telepon"
+            required
+            class="w-full border rounded-md px-4 py-3 bg-white dark:bg-gray-800 dark:border-gray-600"
+          />
+        </div>
+
+        <div>
+          <label class="block mb-1">Pilih Buket</label>
+          <select
+            name="produk"
+            required
+            class="w-full border rounded-md px-4 py-3 bg-white dark:bg-gray-800 dark:border-gray-600"
+          >
+            <option value="">-- Pilih Buket --</option>
+            <option value="Mawar Merah">Buket Mawar Merah - Rp150.000</option>
+            <option value="Ulang Tahun">Buket Ulang Tahun - Rp200.000</option>
+            <option value="Elegan">Buket Elegan - Rp180.000</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1">Alamat Pengiriman</label>
+          <textarea
+            name="alamat"
+            rows="4"
+            required
+            class="w-full border rounded-md px-4 py-3 bg-white dark:bg-gray-800 dark:border-gray-600"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-apple w-full text-center">
+          Pesan Sekarang
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="text-center py-10 text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800"
+    >
+      © 2025 NOVAN CRAFT
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+      // Validasi dan dummy submit
+      document
+        .getElementById("form-pemesanan")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert(
+            "Pesanan berhasil dikirim! Kami akan menghubungi Anda via WhatsApp."
+          );
+          this.reset();
+        });
+
+      lucide.createIcons();
+      AOS.init();
+    </script>
+  </body>
+</html>
